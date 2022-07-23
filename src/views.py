@@ -37,12 +37,30 @@ def createP():
 
 @views.route('/createP2', methods=['GET'])
 def createP2():
-    return render_template("createP2.html")
+    # return render_template("createP2.html")
+    return render_template("createP2.html", dic=d, nombre="FirstName", apellido="LastName", edad=str(2022-d["DateOfBirth"].year))
+
 
 
 @views.route('/createPF', methods=['GET'])
 def createPF():
     return render_template("createPF.html")
+
+@views.route('/seccionar', methods=['GET'])
+def seccionar():
+    return render_template("seccionar.html")
+
+@views.route('/vProfesor', methods=['GET'])
+def vProfesor():
+    return render_template("vProfesor.html")
+
+@views.route('/Notificaciones', methods=['GET'])
+def Notificaciones():
+    return render_template("Notificaciones.html")
+
+@views.route('/sscurso', methods=['GET'])
+def sscurso():
+    return render_template("sscurso.html")
 
 
 @views.route('/createPF2', methods=['GET'])
